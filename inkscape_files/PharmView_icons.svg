@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1122.5197"
+   height="793.70081"
+   viewBox="0 0 296.99998 210.00001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="PharmView_icons.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient923"
+       inkscape:collect="always">
+      <stop
+         id="stop925"
+         offset="0"
+         style="stop-color:#7d0000;stop-opacity:1" />
+      <stop
+         id="stop927"
+         offset="1"
+         style="stop-color:#fa1f00;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient923-9">
+      <stop
+         style="stop-color:#097d00;stop-opacity:1"
+         offset="0"
+         id="stop919" />
+      <stop
+         style="stop-color:#00fa61;stop-opacity:0"
+         offset="1"
+         id="stop921" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient866-8">
+      <stop
+         style="stop-color:#006e7d;stop-opacity:1"
+         offset="0"
+         id="stop862" />
+      <stop
+         style="stop-color:#1200fa;stop-opacity:0"
+         offset="1"
+         id="stop864" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient866-8"
+       id="linearGradient870"
+       x1="80.575668"
+       y1="260.38406"
+       x2="165.84685"
+       y2="259.84952"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2774778,0,0,0.82212932,-99.434418,60.079074)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient923-9"
+       id="linearGradient903"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2774778,0,0,0.82212932,-6.9591622,59.544535)"
+       x1="80.575668"
+       y1="260.38406"
+       x2="165.84685"
+       y2="259.84952" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient923"
+       id="linearGradient911"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2774778,0,0,0.82212932,83.912476,59.544535)"
+       x1="80.575668"
+       y1="260.38406"
+       x2="165.84685"
+       y2="259.84952" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="346.059"
+     inkscape:cy="136.25262"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-global="false"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-86.999992)">
+    <g
+       id="g953">
+      <g
+         inkscape:export-ydpi="94"
+         inkscape:export-xdpi="94"
+         inkscape:export-filename="C:\Users\marco\OneDrive\Documentos\Estudos\Projeto-Lister\icons\remedioplus.png"
+         transform="matrix(0.27656552,0,0,0.27142176,-3.7590212,192.92964)"
+         id="g895">
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.78004771;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           id="rect815"
+           width="50.304783"
+           height="68.069664"
+           x="87.6735"
+           y="168.84909"
+           ry="15.882922" />
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.96344125;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           id="rect817"
+           width="37.949875"
+           height="11.20146"
+           x="94.290001"
+           y="156.85686"
+           ry="5.6007299" />
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.83271718;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           id="rect819"
+           width="47.020721"
+           height="28.579121"
+           x="89.110252"
+           y="187.5854"
+           ry="0" />
+        <rect
+           style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.81400001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           id="rect821"
+           width="9.0871639"
+           height="18.708866"
+           x="107.54249"
+           y="191.85236" />
+        <rect
+           y="-122.36874"
+           x="197.18227"
+           height="18.813852"
+           width="6.8500671"
+           id="rect823"
+           style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.70871687;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           transform="matrix(-0.00577569,0.99998332,-0.99999473,-0.00324542,0,0)" />
+        <rect
+           y="206.14021"
+           x="146.35576"
+           height="24.343634"
+           width="11.824052"
+           id="rect825"
+           style="opacity:1;fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.0591619;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           ry="4.1577444" />
+        <rect
+           transform="matrix(-0.00577569,0.99998332,-0.99999473,-0.00324542,0,0)"
+           style="opacity:1;fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.92216939;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           id="rect827"
+           width="8.9131823"
+           height="24.48024"
+           x="213.05464"
+           y="-165.3961"
+           ry="3.3226662" />
+      </g>
+    </g>
+    <g
+       id="g933"
+       transform="matrix(0.61501986,0,0,0.62715034,1.5472931,99.34505)"
+       inkscape:export-filename="C:\Users\marco\OneDrive\Documentos\Estudos\Projeto-Lister\icons\add_remedio.png"
+       inkscape:export-xdpi="94"
+       inkscape:export-ydpi="94">
+      <rect
+         ry="2.7316594"
+         y="263.60141"
+         x="4.0191503"
+         height="21.094091"
+         width="86.040581"
+         id="rect846"
+         style="opacity:1;fill:url(#linearGradient870);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.83420187;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <text
+         id="text879"
+         y="278.04651"
+         x="14.185791"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.57777786px;line-height:1.25;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:11.28888893px;stroke-width:0.26458332"
+           y="278.04651"
+           x="14.185791"
+           id="tspan877"
+           sodipodi:role="line">Add Remedios</tspan></text>
+    </g>
+    <g
+       id="g938"
+       transform="matrix(0.61501986,0,0,0.62715034,3.1305731,99.523725)"
+       inkscape:export-filename="C:\Users\marco\OneDrive\Documentos\Estudos\Projeto-Lister\icons\edit_remedio.png"
+       inkscape:export-xdpi="94"
+       inkscape:export-ydpi="94">
+      <rect
+         style="opacity:1;fill:url(#linearGradient903);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.83420187;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect897"
+         width="86.040581"
+         height="21.094091"
+         x="96.494408"
+         y="263.06686"
+         ry="2.7316594" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.57777786px;line-height:1.25;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="104.01521"
+         y="277.51196"
+         id="text901"><tspan
+           sodipodi:role="line"
+           id="tspan899"
+           x="104.01521"
+           y="277.51196"
+           style="font-size:11.28888893px;stroke-width:0.26458332">Editar Remedios</tspan></text>
+    </g>
+    <g
+       id="g943"
+       transform="matrix(0.61501986,0,0,0.62715034,13.923872,99.523725)"
+       inkscape:export-filename="C:\Users\marco\OneDrive\Documentos\Estudos\Projeto-Lister\icons\del_remedio.png"
+       inkscape:export-xdpi="94"
+       inkscape:export-ydpi="94">
+      <rect
+         ry="2.7316594"
+         y="263.06686"
+         x="187.36604"
+         height="21.094091"
+         width="86.040581"
+         id="rect905"
+         style="opacity:1;fill:url(#linearGradient911);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.83420187;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <text
+         id="text909"
+         y="277.51196"
+         x="191.86304"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.57777786px;line-height:1.25;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:11.28888893px;stroke-width:0.26458332"
+           y="277.51196"
+           x="191.86304"
+           id="tspan907"
+           sodipodi:role="line">Excluir Remedios</tspan></text>
+    </g>
+    <g
+       id="g1008"
+       inkscape:export-filename="C:\Users\marco\OneDrive\Documentos\Estudos\Projeto-Lister\icons\remediodelet.png"
+       inkscape:export-xdpi="94"
+       inkscape:export-ydpi="94">
+      <rect
+         ry="4.3109708"
+         y="239.13693"
+         x="147.29945"
+         height="18.475588"
+         width="13.912568"
+         id="rect988"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.2137187;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <rect
+         ry="1.52016"
+         y="235.88199"
+         x="149.12935"
+         height="3.0403199"
+         width="10.495626"
+         id="rect990"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26396516;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <rect
+         ry="0"
+         y="244.22238"
+         x="147.69681"
+         height="7.7569952"
+         width="13.004311"
+         id="rect992"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.22814916;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <rect
+         y="245.38052"
+         x="152.79453"
+         height="5.0779934"
+         width="2.5131962"
+         id="rect994"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.223021;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <rect
+         transform="matrix(-0.00588515,0.99998268,-0.99999493,-0.00318506,0,0)"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.19417541;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect996"
+         width="1.8592584"
+         height="5.2032619"
+         x="246.435"
+         y="-158.03091" />
+      <rect
+         ry="0.9189347"
+         y="-169.9308"
+         x="250.74312"
+         height="6.7703891"
+         width="2.4192331"
+         id="rect1000"
+         style="opacity:1;fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25265747;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         transform="matrix(-0.00588515,0.99998268,-0.99999493,-0.00318506,0,0)" />
+    </g>
+    <g
+       id="g1030"
+       inkscape:export-filename="C:\Users\marco\OneDrive\Documentos\Estudos\Projeto-Lister\icons\remedioedit.png"
+       inkscape:export-xdpi="94"
+       inkscape:export-ydpi="94">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.2137187;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect955"
+         width="13.912568"
+         height="18.475588"
+         x="80.397675"
+         y="239.13693"
+         ry="4.3109708" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.26396516;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect957"
+         width="10.495626"
+         height="3.0403199"
+         x="82.22757"
+         y="235.88199"
+         ry="1.52016" />
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.22814916;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect959"
+         width="13.004311"
+         height="7.7569952"
+         x="80.795029"
+         y="244.22238"
+         ry="0" />
+      <rect
+         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.223021;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect961"
+         width="2.5131962"
+         height="5.0779934"
+         x="85.892746"
+         y="245.38052" />
+      <rect
+         y="-91.130051"
+         x="246.64809"
+         height="5.2032619"
+         width="1.8592584"
+         id="rect963"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.19417541;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         transform="matrix(-0.00588515,0.99998268,-0.99999493,-0.00318506,0,0)" />
+      <g
+         transform="matrix(0.79103254,0.28121779,-0.28121779,0.79103254,89.476249,26.46025)"
+         id="g1019">
+        <rect
+           style="opacity:1;fill:#d4aa00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.24346313;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           id="rect1010"
+           width="3.5624416"
+           height="8.5737457"
+           x="97.075089"
+           y="246.57573"
+           ry="1.6406568" />
+        <path
+           sodipodi:type="star"
+           style="opacity:1;fill:#ffdd55;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.51392466;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           id="path1012"
+           sodipodi:sides="3"
+           sodipodi:cx="99.223808"
+           sodipodi:cy="256.30823"
+           sodipodi:r1="1.5478359"
+           sodipodi:r2="3.0956719"
+           sodipodi:arg1="0.5070985"
+           sodipodi:arg2="1.5542961"
+           inkscape:flatsided="false"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="m 100.57686,257.05992 -1.301975,2.34356 -1.37859,-2.29932 -1.378591,-2.29932 2.680566,-0.0442 2.68057,-0.0442 z"
+           inkscape:transform-center-x="-0.010279401"
+           inkscape:transform-center-y="-0.1930399"
+           transform="matrix(0.40250785,0,0,0.53764267,58.902384,117.9181)" />
+        <rect
+           style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           id="rect1014"
+           width="0.4009043"
+           height="0.76839989"
+           x="98.622452"
+           y="257.0098"
+           ry="0.20045215" />
+      </g>
+    </g>
+  </g>
+</svg>
