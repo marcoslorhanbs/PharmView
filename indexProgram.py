@@ -108,17 +108,35 @@ DelRemedioButton.bind("<Enter>", onp3)
 BotFrame = Frame(InitMainFrame, width=1366, height=300, bg="darkgray", relief="raise")
 BotFrame.place(x=0, y=300)
 
+def DownBotFrame():
+    if (BotFrameMin["text"] == "▼"):
+        BotFrame.place(x=5000)
+        BotFrameMin.place(y=510)
+        BotFrameMin["text"] = "▲"
+    elif (BotFrameMin["text"] == "▲"):
+        BotFrame.place(x=0)
+        BotFrameMin.place(y=280)
+        BotFrameMin["text"] = "▼"
+
+BotFrameMin = Button(InitMainFrame, text="▼", font=("Times New Roman", 16), bg="gray", command=DownBotFrame)
+BotFrameMin.place(x=0, y=280)
+
+BotTitle = Label(BotFrame, text="Desenvolvido por Devpy - Todos os direitos reservados",
+font=("Century Gothic", 16), bg="darkgray")
+BotTitle.place(x=400, y=5)
+
+
 BotTitleLabel = Label(BotFrame, text="PharmView", font=("Century Gothic", 16), bg="darkgray")
-BotTitleLabel.place(x=5, y=5)
+BotTitleLabel.place(x=5, y=45)
 
 BotInfo1Label = Label(BotFrame, text="♦ Adiciona Remedios", font=("Century Gothic", 16), bg="darkgray")
-BotInfo1Label.place(x=5, y=45)
+BotInfo1Label.place(x=5, y=75)
 
 BotInfo2Label = Label(BotFrame, text="♦ Edita Remedios", font=("Century Gothic", 16), bg="darkgray")
-BotInfo2Label.place(x=5, y=75)
+BotInfo2Label.place(x=5, y=105)
 
 BotInfo3Label = Label(BotFrame, text="♦ Remove Remedios", font=("Century Gothic", 16), bg="darkgray")
-BotInfo3Label.place(x=5, y=105)
+BotInfo3Label.place(x=5, y=135)
 
 
 
