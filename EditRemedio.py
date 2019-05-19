@@ -5,7 +5,7 @@ import sqlite3
 
 jan = Tk()
 jan.title("Editar Remedios do Sistema")
-jan.geometry("500x400+350+150")
+jan.geometry("500x410+350+150")
 
 #==== PHOTO IMAGES =============
 search = PhotoImage(file="icons/search.png")
@@ -43,6 +43,7 @@ def ProcurarParaEditar():
     """, (remnome,))
     
     for linha in DataBaser.cursor.fetchmany(1):
+        RemedioIdEntry["state"] = NORMAL
         RemedioNomeEntry["state"] = NORMAL
         RemedioTagEntry["state"] = NORMAL
         RemedioPrecoEntry["state"] = NORMAL
@@ -103,6 +104,13 @@ def ProcurarParaEditar():
                 ReceitaMedicaSim.select()
             elif(item7 == "Nao Necessita Receita"):
                 ReceitaMedicaNao.select()
+        #8
+        RemedyId = DataBaser.cursor.execute("""
+        Select id FROM Remedios
+        WHERE nome = ?
+        """, (remnome,))
+        for item8 in DataBaser.cursor.fetchone():
+            RemedioIdEntry.insert(END, item8)
     
 
 
@@ -114,41 +122,47 @@ SearchButton.place(x=430, y=0)
 RemedioFrame = LabelFrame(MainFrame, text="Informações do Remédio", labelanchor="n")
 RemedioFrame.pack(side=TOP)
 
+RemedioIdLabel = Label(RemedioFrame, text="ID do Remédio:", font=("Times New Roman", 14, "bold"))
+RemedioIdLabel.grid(row=0, column=0)
+
+RemedioIdEntry = Entry(RemedioFrame, width=30,state=DISABLED)
+RemedioIdEntry.grid(row=0, column=1)
+
 RemedioNomeLabel = Label(RemedioFrame, text="Nome do Remédio:", font=("Times New Roman", 14, "bold"))
-RemedioNomeLabel.grid(row=0, column=0)
+RemedioNomeLabel.grid(row=1, column=0)
 
 RemedioNomeEntry = Entry(RemedioFrame, width=30,state=DISABLED)
-RemedioNomeEntry.grid(row=0, column=1)
+RemedioNomeEntry.grid(row=1, column=1)
 
 
 
 #
 
 RemedioTagLabel = Label(RemedioFrame, text="Categoria do Remédio:", font=("Times New Roman", 14, "bold"))
-RemedioTagLabel.grid(row=1, column=0)
+RemedioTagLabel.grid(row=2, column=0)
 
 RemedioTagEntry = Entry(RemedioFrame, width=30,state=DISABLED)
-RemedioTagEntry.grid(row=1, column=1)
+RemedioTagEntry.grid(row=2, column=1)
 
 
 
 #
 
 RemedioPrecoLabel = Label(RemedioFrame, text="Preço do Remédio:", font=("Times New Roman", 14, "bold"))
-RemedioPrecoLabel.grid(row=2, column=0)
+RemedioPrecoLabel.grid(row=3, column=0)
 
 RemedioPrecoEntry = Entry(RemedioFrame, width=30,state=DISABLED)
-RemedioPrecoEntry.grid(row=2, column=1)
+RemedioPrecoEntry.grid(row=3, column=1)
 
 
 
 #
 
 RemedioQuantidadeLabel = Label(RemedioFrame, text="Quantidade Disponível:", font=("Times New Roman", 14, "bold"))
-RemedioQuantidadeLabel.grid(row=3, column=0)
+RemedioQuantidadeLabel.grid(row=4, column=0)
 
 RemedioQuantidadeEntry = Entry(RemedioFrame, width=30,state=DISABLED)
-RemedioQuantidadeEntry.grid(row=3, column=1)
+RemedioQuantidadeEntry.grid(row=4, column=1)
 
 
 
@@ -217,17 +231,35 @@ def EditarRemedio():
     RemedioHorario = RemedioHorarioEntry.get()
     PacienteQuantidade = PacienteQuantidadeEntry.get()
     ReceitaMedica = ReceitaVariavel.get()
+    PegaId = RemedioIdEntry.get()
     DataBaser.cursor.execute("""
     UPDATE Remedios
     SET Nome = ?, Categoria = ?, Preco = ?, QuantidadeRemedio = ?, Horario = ?, QuantidadeUso = ?, Receita = ?
-    WHERE Nome = ?
-    """, (RemedioNome, RemedioTag, RemedioPreco, RemedioQuantidade, RemedioHorario, PacienteQuantidade, ReceitaMedica, RemedioNome))
+    WHERE id = ?
+    """, (RemedioNome, RemedioTag, RemedioPreco, RemedioQuantidade, RemedioHorario, PacienteQuantidade, ReceitaMedica, PegaId))
 
     DataBaser.conn.commit()
 
     print('Dados atualizados com sucesso.')
     messagebox.showinfo(title="PharmView Aviso", message="Dados Atualizados Com Sucesso, Ja pode fechar a aplicação.")
-
+    AskNomeEntry.delete(0, 'end')
+    RemedioIdEntry.delete(0, 'end')
+    RemedioNomeEntry.delete(0, 'end')
+    RemedioTagEntry.delete(0, 'end')
+    RemedioPrecoEntry.delete(0, 'end')
+    RemedioQuantidadeEntry.delete(0, 'end')
+    RemedioHorarioEntry.delete(0, 'end')
+    PacienteQuantidadeEntry.delete(0, 'end')
+    ReceitaVariavel.set(None)
+    RemedioIdEntry["state"] = DISABLED
+    RemedioNomeEntry["state"] = DISABLED
+    RemedioTagEntry["state"] = DISABLED
+    RemedioPrecoEntry["state"] = DISABLED
+    RemedioQuantidadeEntry["state"] = DISABLED
+    RemedioHorarioEntry["state"] = DISABLED
+    PacienteQuantidadeEntry["state"] = DISABLED
+    ReceitaMedicaSim["state"] = DISABLED
+    ReceitaMedicaNao["state"] = DISABLED
 
 EditarButton = Button(MainFrame, image=editar, bd=0, command=EditarRemedio)
 EditarButton.pack(side=BOTTOM)
