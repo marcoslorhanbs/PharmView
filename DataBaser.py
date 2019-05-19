@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS Remedios (
 );
 """)
 
+
 print('Tabela criada com sucesso.')
 # desconectando...
 

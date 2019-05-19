@@ -17,7 +17,7 @@ def View():
     for row in rows:
         print(row) # Printa Todos os Registors do Banco De Dados
         tree.insert("", tk.END, values=row)
-    DataBaser.conn.close()
+    #DataBaser.conn.close()
 
 def Procurar():
     remnome = RemedioNomeEntry.get()
@@ -84,6 +84,7 @@ root = Tk()
 root.title("Visualizar Remedios do Sistema")
 root.geometry("980x500+0+100")
 root.configure(background="darkgray")
+root.resizable(width=False, height=False)
 
 #============ PHOTO IMAGES ==============
 ver_remedios = PhotoImage(file="icons/ver_remedios.png")
@@ -95,10 +96,10 @@ tree.heading("#1", text="ID")
 tree.column("#1",minwidth=20,width=25, anchor=tk.CENTER)
 tree.heading("#2", text="Remédio")
 tree.column("#2",minwidth=200,width=200, anchor=tk.CENTER)
-tree.heading("#3", text="Categoria")
-tree.column("#3",minwidth=200,width=200, anchor=tk.CENTER)
-tree.heading("#4", text="Preço")
-tree.column("#4",minwidth=50,width=65, anchor=tk.CENTER)
+tree.heading("#3", text="Preço")
+tree.column("#3",minwidth=50,width=65, anchor=tk.CENTER)
+tree.heading("#4", text="Categoria")
+tree.column("#4",minwidth=200,width=200, anchor=tk.CENTER)
 tree.heading("#5", text="Qntd Disponível")
 tree.column("#5",minwidth=100,width=100, anchor=tk.CENTER)
 tree.heading("#6", text="Horario P/ Uso")
