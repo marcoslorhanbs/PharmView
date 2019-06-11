@@ -9,12 +9,58 @@ jan.geometry("1366x700+0+0")
 jan.resizable(width=False, height=False)
 jan.iconbitmap(default="icons/icon.ico")
 
+#MENU DA JANELA (EXTRA TOP)
+
+class Sistema:
+    def __init__(self, box):
+        self.frame = Frame(box)#Crio o box top-level
+        self.frame.pack()
+        self.menu = Menu(box)#crio o menu
+        
+        self.menuFile = Menu(self.menu)#Primeiro Menu
+        self.menuFile.add_command(label="Adicionar Medicamento", command=self.AddMedicamento)
+        self.menuFile.add_command(label="Editar Medicamento", command=self.EdtMedicamento)
+        self.menuFile.add_command(label="Excluir Medicamento", command=self.DelMedicamento)
+        self.menuFile.add_command(label="Visualizar Medicamentos", command=self.VerMedicamentos)
+        self.menu.add_cascade(label="Menu", menu=self.menuFile)
+        self.menuHelp = Menu(self.menu)#Segundo Menu
+        self.menuHelp.add_command(label="Dicas", command=self.dicas)
+        self.menuHelp.add_command(label="Suporte", command=self.suporte)
+        self.menuHelp.add_command(label="Sair", command=self.sair)
+        self.menu.add_cascade(label="Ajuda", menu=self.menuHelp)
+        box.config(menu=self.menu)
+
+    #===== Menus =========
+    def AddMedicamento(self):
+        os.system('python AddRemedio.py')
+    def EdtMedicamento(self):
+        os.system('python EditRemedio.py')
+    def DelMedicamento(self):
+        os.system('python DeleteRemedio.py')
+    def VerMedicamentos(self):
+        os.system('python ProcurarRemedios.py')
+    #===== Ajuda ===========
+    def dicas(self):
+        messagebox.showinfo(title="Dicas", message="• Add Remedio/Medicamento - Abre uma janela para cadastro de medicamentos no sistema \n • Editar Remedio/Medicamento - Abre uma janela para edição de dados de determinado medicamento ja salvo no sistema \n • Excluir Remedio - Abre uma janela para exclusão de determinado remedio/medicamento se já salvo no sistema \n • Procurar/ver Remedios - Abre uma Janela de Navegação que permite a visualização Tabelada de todos os remedios do sistema  Também permite a busca por determinado remedio")
+    def suporte(self):
+        messagebox.showinfo(title="Suporte", message="Algum problema com o sistema? \n Envie um e-mail para: devpysupport@gmail.com")
+    def sair(self):
+        exit()
+
+
+
+
+
 #========= Photo Images / Arquivo de Imagens =====================================#
 #======= Botoes ===============
 add_remedio = PhotoImage(file="icons/add_remedio.png")
 edit_remedio = PhotoImage(file="icons/edit_remedio.png")
 del_remedio = PhotoImage(file="icons/del_remedio.png")
 search_remedio = PhotoImage(file="icons/search_remedio.png")
+notifications = PhotoImage(file="icons/notificacao.png")
+notifications_active = PhotoImage(file="icons/notificacao_ativa.png")
+settings = PhotoImage(file="icons/settings.png")
+exitimg = PhotoImage(file="icons/exit.png")
 
 #========= Icones =============
 remedio_plus = PhotoImage(file="icons/remedioplus.png")
@@ -144,13 +190,13 @@ SearchRemedioButton.bind("<Enter>", onp4)
 
 #============= BOTTOM FRAME ===========
 
-BotFrame = Frame(InitMainFrame, width=1366, height=300, bg="darkgray", relief="raise")
+BotFrame = Frame(InitMainFrame, width=650, height=300, bg="darkgray", relief="raise")
 BotFrame.place(x=0, y=300)
 
 def DownBotFrame():
     if (BotFrameMin["text"] == "▼"):
         BotFrame.place(x=5000)
-        BotFrameMin.place(y=510)
+        BotFrameMin.place(y=490)
         BotFrameMin["text"] = "▲"
     elif (BotFrameMin["text"] == "▲"):
         BotFrame.place(x=0)
@@ -158,11 +204,11 @@ def DownBotFrame():
         BotFrameMin["text"] = "▼"
 
 BotFrameMin = Button(InitMainFrame, text="▼", font=("Times New Roman", 16), bg="gray", command=DownBotFrame)
-BotFrameMin.place(x=625, y=280)
+BotFrameMin.place(x=5, y=280)
 
 BotTitle = Label(BotFrame, text="Desenvolvido por Devpy - Todos os direitos reservados",
 font=("Century Gothic", 16), bg="darkgray")
-BotTitle.place(x=400, y=200)
+BotTitle.place(x=0, y=200)
 
 
 BotTitleLabel = Label(BotFrame, text="PharmView", font=("Century Gothic", 16), bg="darkgray")
@@ -197,6 +243,28 @@ BotInfo3Label.place(x=305, y=135)
 BotInfo4Label = Label(BotFrame, text="♦ Social Media - Designer", font=("Century Gothic", 16), bg="darkgray")
 BotInfo4Label.place(x=305, y=165)
 
+#========== BOTOES FLUTUANTES INFERIOR DIREITO =============================
+FloatFrame = Frame(InitMainFrame, width=710, height=300, bg="#f0f0f0", relief="raise")
+FloatFrame.place(x=650, y=300)
 
+def notificator():
+    os.system("python Notifications.py")
 
+notificador = Button(FloatFrame, image=notifications, bd=0, command=notificator)
+notificador.place(x=650, y=150)
+
+def configurar():
+    pass
+    
+
+configurador = Button(FloatFrame, image=settings, bd=0, command=configurar)
+configurador.place(x=595, y=150)
+
+def sair():
+    pass
+
+sair = Button(FloatFrame, image=exitimg, bd=0, command=sair)
+sair.place(x=540, y=150)
+
+Sistema(jan)
 jan.mainloop()

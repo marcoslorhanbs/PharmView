@@ -1,7 +1,7 @@
 import sqlite3
 
 # conectando...
-conn = sqlite3.connect('Remedios.db')
+conn = sqlite3.connect('Data/Remedios.db')
 # definindo um cursor
 cursor = conn.cursor()
 
@@ -18,7 +18,8 @@ CREATE TABLE IF NOT EXISTS Remedios (
         QuantidadeRemedio TEXT NOT NULL,
         Horario TEXT NOT NULL,
         QuantidadeUso TEXT NOT NULL,
-        Receita TEXT NOT NULL
+        Receita TEXT NOT NULL,
+        Validade TEXT NOT NULL
         
 
 );
@@ -42,3 +43,4 @@ conn.commit()
 
 print('Dados inseridos com sucesso.')
 '''
+

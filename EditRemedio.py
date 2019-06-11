@@ -1,11 +1,13 @@
 from tkinter import *
 from tkinter import messagebox
+from tkinter import ttk
+from tkcalendar import Calendar, DateEntry
 import DataBaser
 import sqlite3
 
 jan = Tk()
 jan.title("Editar Remedios do Sistema")
-jan.geometry("500x410+350+150")
+jan.geometry("500x450+350+150")
 
 #==== PHOTO IMAGES =============
 search = PhotoImage(file="icons/search.png")
@@ -31,7 +33,7 @@ MainFrame.pack()
 AskNomeLabel = Label(Top, text="Nome do Remedio:", bg="#088809", font=("Times New Roman", 16, "bold"))
 AskNomeLabel.place(x=5, y=5)
 
-AskNomeEntry = Entry(Top, width=20, bg="#088809", font=("Times New Roman", 16, "bold"))
+AskNomeEntry = ttk.Entry(Top, width=20, font=("Times New Roman", 16, "bold"))
 AskNomeEntry.place(x=200, y=5)
 
 def ProcurarParaEditar():
@@ -52,6 +54,7 @@ def ProcurarParaEditar():
         PacienteQuantidadeEntry["state"] = NORMAL
         ReceitaMedicaSim["state"] = NORMAL
         ReceitaMedicaNao["state"] = NORMAL
+        RemedioValidadeEntry["state"] = NORMAL
         #1
         nome = DataBaser.cursor.execute("""
         Select Nome FROM Remedios
@@ -111,10 +114,17 @@ def ProcurarParaEditar():
         """, (remnome,))
         for item8 in DataBaser.cursor.fetchone():
             RemedioIdEntry.insert(END, item8)
+        #9
+        Validade = DataBaser.cursor.execute("""
+        Select Validade FROM Remedios
+        WHERE nome = ?
+        """, (remnome,))
+        for item9 in DataBaser.cursor.fetchone():
+            RemedioValidadeEntry.insert(END, item9)
     
 
 
-SearchButton = Button(Top, image=search, bg="#088809", bd=0, command=ProcurarParaEditar)
+SearchButton = ttk.Button(Top, image=search, command=ProcurarParaEditar)
 SearchButton.place(x=430, y=0)
 
 #================== EDIT WIDGETS ===========================
@@ -125,13 +135,13 @@ RemedioFrame.pack(side=TOP)
 RemedioIdLabel = Label(RemedioFrame, text="ID do Remédio:", font=("Times New Roman", 14, "bold"))
 RemedioIdLabel.grid(row=0, column=0)
 
-RemedioIdEntry = Entry(RemedioFrame, width=30,state=DISABLED)
+RemedioIdEntry = ttk.Entry(RemedioFrame, width=30,state=DISABLED)
 RemedioIdEntry.grid(row=0, column=1)
 
 RemedioNomeLabel = Label(RemedioFrame, text="Nome do Remédio:", font=("Times New Roman", 14, "bold"))
 RemedioNomeLabel.grid(row=1, column=0)
 
-RemedioNomeEntry = Entry(RemedioFrame, width=30,state=DISABLED)
+RemedioNomeEntry = ttk.Entry(RemedioFrame, width=30,state=DISABLED)
 RemedioNomeEntry.grid(row=1, column=1)
 
 
@@ -141,7 +151,7 @@ RemedioNomeEntry.grid(row=1, column=1)
 RemedioTagLabel = Label(RemedioFrame, text="Categoria do Remédio:", font=("Times New Roman", 14, "bold"))
 RemedioTagLabel.grid(row=2, column=0)
 
-RemedioTagEntry = Entry(RemedioFrame, width=30,state=DISABLED)
+RemedioTagEntry = ttk.Entry(RemedioFrame, width=30,state=DISABLED)
 RemedioTagEntry.grid(row=2, column=1)
 
 
@@ -151,7 +161,7 @@ RemedioTagEntry.grid(row=2, column=1)
 RemedioPrecoLabel = Label(RemedioFrame, text="Preço do Remédio:", font=("Times New Roman", 14, "bold"))
 RemedioPrecoLabel.grid(row=3, column=0)
 
-RemedioPrecoEntry = Entry(RemedioFrame, width=30,state=DISABLED)
+RemedioPrecoEntry = ttk.Entry(RemedioFrame, width=30,state=DISABLED)
 RemedioPrecoEntry.grid(row=3, column=1)
 
 
@@ -161,10 +171,16 @@ RemedioPrecoEntry.grid(row=3, column=1)
 RemedioQuantidadeLabel = Label(RemedioFrame, text="Quantidade Disponível:", font=("Times New Roman", 14, "bold"))
 RemedioQuantidadeLabel.grid(row=4, column=0)
 
-RemedioQuantidadeEntry = Entry(RemedioFrame, width=30,state=DISABLED)
+RemedioQuantidadeEntry = ttk.Entry(RemedioFrame, width=30,state=DISABLED)
 RemedioQuantidadeEntry.grid(row=4, column=1)
 
+#
 
+RemedioValidadeLabel = Label(RemedioFrame, text="Validade do Remédio:", font=("Times New Roman", 14, "bold"))
+RemedioValidadeLabel.grid(row=5, column=0)
+
+RemedioValidadeEntry = DateEntry(RemedioFrame, width=28, background='darkblue', foreground='white', borderwidth=2, year=2019,state=DISABLED)
+RemedioValidadeEntry.grid(row=5, column=1)
 
 #=========== Informaçoes ao Paciente ====================
 PacienteFrame = LabelFrame(MainFrame, text="Informações ao Paciente", labelanchor="n")
@@ -173,7 +189,7 @@ PacienteFrame.pack(side=TOP)
 RemedioHorarioLabel = Label(PacienteFrame, text="Horário para Uso:", font=("Times New Roman", 14, "bold"))
 RemedioHorarioLabel.grid(row=0, column=0)
 
-RemedioHorarioEntry = Entry(PacienteFrame, width=30,state=DISABLED)
+RemedioHorarioEntry = ttk.Entry(PacienteFrame, width=30,state=DISABLED)
 RemedioHorarioEntry.grid(row=0, column=1)
 
 
@@ -183,7 +199,7 @@ RemedioHorarioEntry.grid(row=0, column=1)
 PacienteQuantidadeLabel = Label(PacienteFrame, text="Quantidade para Uso:", font=("Times New Roman", 14, "bold"))
 PacienteQuantidadeLabel.grid(row=1, column=0)
 
-PacienteQuantidadeEntry = Entry(PacienteFrame, width=30,state=DISABLED)
+PacienteQuantidadeEntry = ttk.Entry(PacienteFrame, width=30,state=DISABLED)
 PacienteQuantidadeEntry.grid(row=1, column=1)
 
 
@@ -207,6 +223,7 @@ def LimparCampos():
     RemedioTagEntry.delete(0, 'end')
     RemedioPrecoEntry.delete(0, 'end')
     RemedioQuantidadeEntry.delete(0, 'end')
+    RemedioValidadeEntry.delete(0, 'end')
     RemedioHorarioEntry.delete(0, 'end')
     PacienteQuantidadeEntry.delete(0, 'end')
     ReceitaVariavel.set(None)
@@ -218,8 +235,9 @@ def LimparCampos():
     PacienteQuantidadeEntry["state"] = DISABLED
     ReceitaMedicaSim["state"] = DISABLED
     ReceitaMedicaNao["state"] = DISABLED
+    RemedioValidadeEntry["state"] = DISABLED
 
-LimparButton = Button(MainFrame, text="Limpar Campos", command=LimparCampos, bg="green", fg="white")
+LimparButton = ttk.Button(MainFrame, text="Limpar Campos", command=LimparCampos)
 LimparButton.pack(side=BOTTOM)
 
 
@@ -232,11 +250,12 @@ def EditarRemedio():
     PacienteQuantidade = PacienteQuantidadeEntry.get()
     ReceitaMedica = ReceitaVariavel.get()
     PegaId = RemedioIdEntry.get()
+    Validade = RemedioValidadeEntry.get()
     DataBaser.cursor.execute("""
     UPDATE Remedios
-    SET Nome = ?, Categoria = ?, Preco = ?, QuantidadeRemedio = ?, Horario = ?, QuantidadeUso = ?, Receita = ?
+    SET Nome = ?, Categoria = ?, Preco = ?, QuantidadeRemedio = ?, Horario = ?, QuantidadeUso = ?, Receita = ?, Validade = ?
     WHERE id = ?
-    """, (RemedioNome, RemedioTag, RemedioPreco, RemedioQuantidade, RemedioHorario, PacienteQuantidade, ReceitaMedica, PegaId))
+    """, (RemedioNome, RemedioTag, RemedioPreco, RemedioQuantidade, RemedioHorario, PacienteQuantidade, ReceitaMedica,Validade, PegaId))
 
     DataBaser.conn.commit()
 
@@ -250,6 +269,7 @@ def EditarRemedio():
     RemedioQuantidadeEntry.delete(0, 'end')
     RemedioHorarioEntry.delete(0, 'end')
     PacienteQuantidadeEntry.delete(0, 'end')
+    RemedioValidadeEntry.delete(0, 'end')
     ReceitaVariavel.set(None)
     RemedioIdEntry["state"] = DISABLED
     RemedioNomeEntry["state"] = DISABLED
@@ -260,8 +280,9 @@ def EditarRemedio():
     PacienteQuantidadeEntry["state"] = DISABLED
     ReceitaMedicaSim["state"] = DISABLED
     ReceitaMedicaNao["state"] = DISABLED
+    RemedioValidadeEntry["state"] = DISABLED
 
-EditarButton = Button(MainFrame, image=editar, bd=0, command=EditarRemedio)
+EditarButton = ttk.Button(MainFrame, image=editar, command=EditarRemedio)
 EditarButton.pack(side=BOTTOM)
 
 
