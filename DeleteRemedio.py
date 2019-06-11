@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import DataBaser
+from tkinter import ttk
 
 jan = Tk()
 jan.title("Deletar Remedios No Sistema")
@@ -14,28 +15,28 @@ delet = PhotoImage(file="icons/del_remedio_remove.png")
 SuperTop = Frame(jan, width=500, height=25, bg="#880200", relief="raise")
 SuperTop.pack(side=TOP)
 
-SuperTopTitle = Label(SuperTop, text="Remover Remedios do Sistema", font=("Century Gothic", 14), bg="#880200", fg="white")
+SuperTopTitle = ttk.Label(SuperTop, text="Remover Remedios do Sistema", font=("Century Gothic", 14))
 SuperTopTitle.place(x=100, y=0)
 
 #============ WIDGETS ============================
 
-AskNomeLabel = Label(jan, text="Nome do Remedio:", font=("Times New Roman", 16, "bold"))
+AskNomeLabel = ttk.Label(jan, text="Nome do Remedio:", font=("Times New Roman", 16, "bold"))
 AskNomeLabel.place(x=5, y=30)
 
-AskNomeEntry = Entry(jan, width=20, font=("Times New Roman", 16, "bold"))
+AskNomeEntry = ttk.Entry(jan, width=20, font=("Times New Roman", 16, "bold"))
 AskNomeEntry.place(x=200, y=30)
 
 def ProcurarParaEditar():
     # lendo os dados
     remedynome = AskNomeEntry.get()
     DataBaser.cursor.execute("""
-    Select Nome, Categoria, Preco, QuantidadeRemedio, Horario, QuantidadeUso, Receita FROM Remedios
+    Select Nome, Categoria, Preco, QuantidadeRemedio, Horario, QuantidadeUso, Receita, Validade FROM Remedios
     WHERE nome = ?
     """, (remedynome,))
-    InfoLabel = Label(jan, text="Remédio Encontrado")
+    InfoLabel = ttk.Label(jan, text="Remédio Encontrado")
     InfoLabel.place(x=160, y=60)
 
-    RemedioLabel = Label(jan, text= DataBaser.cursor.fetchmany(1))
+    RemedioLabel = ttk.Label(jan, text= DataBaser.cursor.fetchmany(1))
     RemedioLabel.place(x=50, y=75)
 
     def DeletarRemedio():
@@ -52,12 +53,12 @@ def ProcurarParaEditar():
         RemedioLabel.place(x=5000)
         DeleteButton.forget()
 
-    DeleteButton = Button(jan, image=delet, bd=0, command=DeletarRemedio)
+    DeleteButton = ttk.Button(jan, text="Apagar Remédio", command=DeletarRemedio)
     DeleteButton.pack(side=BOTTOM)
     
    
 
-SearchButton = Button(jan, image=search, bg="#088809", bd=0, command=ProcurarParaEditar)
+SearchButton = ttk.Button(jan, text="Procurar", command=ProcurarParaEditar)
 SearchButton.place(x=430, y=30)
 
 
